@@ -1,7 +1,9 @@
 Login page Task:
+
 LANDING PAGE - login, sign up, 
-sign up - email, name, mobile no., password
-login - email, password
+
+#sign up - email, name, mobile no., password
+#login - email, password
 dashboard
 MySQL
 NodeJs
