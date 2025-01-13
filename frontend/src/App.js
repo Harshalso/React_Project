@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css"; // If you have a CSS file for styling
+import "./App.css"; 
 import LogIn from "./Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignUp from "./SignUp";
