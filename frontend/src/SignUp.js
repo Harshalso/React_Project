@@ -1,4 +1,4 @@
-import React, { useState, useNavigate} from "react";
+import React, { useState, useNavigate } from "react";
 import { Link } from "react-router-dom";
 import Validation from "./signupValidation";
 import axios from "axios";
@@ -17,17 +17,16 @@ function SignUp() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(values);
     setErrors(Validation(values));
     if (
       errors.name === "" &&
       errors.mobile === "" &&
-      errors.email === "" &&      
+      errors.email === "" &&
       errors.password === ""
     ) {
       axios
         .post(`http://localhost:5000/signup`, values)
-        .then(response =>{
+        .then((res) => {
           navigate("/login");
         })
         .catch((error) => console.log(error));
@@ -37,7 +36,7 @@ function SignUp() {
   const handleInput = (event) => {
     setValues((prev) => ({
       ...prev,
-      [event.target.name]: [event.target.value],
+      [event.target.name]: event.target.value,
     }));
   };
 
